@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotel-management';
+
+  age:number=20;
+
+
 }

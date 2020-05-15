@@ -6,3 +6,32 @@
 
 <!-- this is a child component -->
 <app-child-a></app-child-a>
+
+<app-child-b></app-child-b>
+
+
+<!-- *ngFor  structural directive-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" *ngFor="let item of [1,2,3,4,5]">
+            <app-temp>{{item}}</app-temp>
+            </div>
+            
+            <div class="col-md-4" *ngFor="let item of [1,2,3,4,5]">
+              <h3>Item - {{item}}</h3>
+            </div>
+    </div>
+</div>
+
+<!-- ngSwitch -->
+
+
+
+<!-- *ngIf  structural directive-->
+
+<h1 *ngIf="age>30 ;else show;">age is greater than 30</h1>
+
+<ng-template #show>
+    <h1>age is less than 30</h1>
+</ng-template>

@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import {TestModule} from './test/test.module';
 import { ChildAComponent } from './child-a/child-a.component';
 import {FormsModule} from '@angular/forms';
+import { ChildBComponent } from './child-b/child-b.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TempComponent } from './temp/temp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildAComponent
+    ChildAComponent,
+    ChildBComponent,
+    TempComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TestModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
