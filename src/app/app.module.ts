@@ -9,13 +9,15 @@ import {FormsModule} from '@angular/forms';
 import { ChildBComponent } from './child-b/child-b.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TempComponent } from './temp/temp.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildAComponent,
     ChildBComponent,
-    TempComponent
+    TempComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

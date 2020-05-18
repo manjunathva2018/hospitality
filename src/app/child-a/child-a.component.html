@@ -1,29 +1,37 @@
 
-<!-- interpolation -->
+<div class="card bg-light mb-3">
+    <div class="card-header">Child A component</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+      <!-- interpolation -->
     <ul>
-    <li>{{title}}</li>
-    <li>{{message}}</li>
-    <li>{{sample()}}</li>
-    </ul>
+        <li>{{title}}</li>
+        <li>{{message}}</li>
+        <li>{{sample()}}</li>
+        </ul>
+    
+    <!-- Property binding -->
+    
+    <h1 [style.color]="color" >Today is wednesday</h1>
+    
+    
+    <!-- event binding -->
+    
+    <button class="btn btn-default" (click)="userClicked();">click</button>
+    
+    <br/>
+    
+    <!-- two-way binding using ngModel -->
+    <div class="form-group col-md-4">
+        <label>Enter your name</label>
+        <input class="form-control" type="text" [(ngModel)]="userInput" /> 
+        <p>{{userInput}}</p>
+    </div>
+    </div>
+  </div>
 
-<!-- Property binding -->
-
-<h1 [style.color]="color" >Today is wednesday</h1>
 
 
-<!-- event binding -->
 
-<button (click)="userClicked();">click</button>
-
-<br/>
-
-<!-- two-way binding using ngModel -->
-
-<label>Enter your name</label>
-<input type="text" [(ngModel)]="userInput" />
-
-<p>{{userInput}}</p>
-
-
-<!-- structural directives -->
 

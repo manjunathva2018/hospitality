@@ -1,37 +1,61 @@
-<h1>Hello world </h1>
+<div class="container-fluid">
+  <!-- This is from another module -->
+  <!-- <app-paragraph></app-paragraph> -->
 
 
-<!-- This is from another module -->
-<!-- <app-paragraph></app-paragraph> -->
+  <div class="card">
+    <div class="card-header">App component / Root component</div>
+    <div class="card-body">
 
-<!-- this is a child component -->
-<app-child-a></app-child-a>
-
-<app-child-b></app-child-b>
-
-
-<!-- *ngFor  structural directive-->
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12" *ngFor="let item of [1,2,3,4,5]">
-            <app-temp>{{item}}</app-temp>
+        <div class="row">
+               <!-- this are a child components -->
+            <div class="col-md-6">
+                <app-child-a></app-child-a>
             </div>
-            
-            <div class="col-md-4" *ngFor="let item of [1,2,3,4,5]">
-              <h3>Item - {{item}}</h3>
+            <div class="col-md-6">
+                <app-child-b></app-child-b>
             </div>
+        </div>
+         
+      <!-- *ngFor  structural directive-->
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of userData" appHighlight>
+          <app-temp>{{ item.name }}</app-temp>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              HTML element iteration
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let item of userData" appHighlight>
+                name - {{ item.name }}, age - {{item.age}}, mobile No - {{item.mobileNo}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ngSwitch -->
+
+      <!-- *ngIf  structural directive-->
+
+      <h1 *ngIf="age > 30; else show">age is greater than 30</h1>
+
+      <ng-template #show>
+        <div class="alert alert-success" role="alert">
+          <h3>age is less than 30</h3>
+        </div>
+      </ng-template>
+
+  
+
     </div>
+  </div>
+
+
 </div>
 
-<!-- ngSwitch -->
 
-
-
-<!-- *ngIf  structural directive-->
-
-<h1 *ngIf="age>30 ;else show;">age is greater than 30</h1>
-
-<ng-template #show>
-    <h1>age is less than 30</h1>
-</ng-template>
