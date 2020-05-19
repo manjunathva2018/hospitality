@@ -3,5 +3,9 @@
     <div class="card-body">
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
+
+<ul *ngFor="let element of displayAminities;let index=index;">
+  <li>{{element}} {{index}} <button class="btn btn-warning" (click)="onDelete(index);">X</button> </li>
+</ul>
     </div>
   </div>

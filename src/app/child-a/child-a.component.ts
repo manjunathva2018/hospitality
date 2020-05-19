@@ -1,5 +1,5 @@
 import { Component, OnInit,OnDestroy,OnChanges,
-  AfterContentInit,AfterContentChecked,DoCheck,AfterViewInit,AfterViewChecked} from '@angular/core';
+  AfterContentInit,AfterContentChecked,DoCheck,AfterViewInit,AfterViewChecked,Input} from '@angular/core';
 
 @Component({
   selector: 'app-child-a',
@@ -8,6 +8,7 @@ import { Component, OnInit,OnDestroy,OnChanges,
 })
 export class ChildAComponent implements OnInit,OnDestroy,OnChanges,
 AfterContentInit,AfterContentChecked,DoCheck,AfterViewInit,AfterViewChecked {
+ @Input() displayAminities=[]; 
 
 //import FormsModule
 userInput:any='';
@@ -19,6 +20,7 @@ message:string;
 color:string;
 
   constructor() {
+
    }
 
 
@@ -44,27 +46,27 @@ color:string;
   
   
     ngOnChanges(){
-      console.log("child ngOnChanges invoked");
+      // console.log("child ngOnChanges invoked");
     }
   
     ngDoCheck (){
-      console.log("child ngDoCheck invoked");
+      // console.log("child ngDoCheck invoked");
     }
   
     ngAfterContentInit (){
-      console.log("child ngAfterContentInit invoked");
+      // console.log("child ngAfterContentInit invoked");
     }
   
     ngAfterContentChecked (){
-      console.log("child ngAfterContentChecked invoked");
+      // console.log("child ngAfterContentChecked invoked");
     }
   
     ngAfterViewInit (){
-      console.log("child ngAfterViewInit invoked");
+      // console.log("child ngAfterViewInit invoked");
     }
   
     ngAfterViewChecked (){
-      console.log("child ngAfterViewChecked invoked");
+      // console.log("child ngAfterViewChecked invoked");
     }
   
     ngOnDestroy(){

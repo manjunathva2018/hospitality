@@ -10,10 +10,19 @@
         <div class="row">
                <!-- this are a child components -->
             <div class="col-md-6">
-                <app-child-a></app-child-a>
+
+
+              <div class="form-group">
+                <label>Enter an amenity for room A10:</label>
+                <input class="form-control" type="text" [(ngModel)]="amenity"/>
+                <button class="btn btn-info" [disabled]="amenities.length>2" (click)="onSave();">save</button>
+              </div>
+
+            
+                <app-child-a [displayAminities]="amenities"></app-child-a>
             </div>
             <div class="col-md-6">
-                <app-child-b></app-child-b>
+                <app-child-b [displayAminities]="amenities" (deleteAminity)="deleteElement($event);"></app-child-b>
             </div>
         </div>
          

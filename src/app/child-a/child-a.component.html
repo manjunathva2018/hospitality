@@ -5,29 +5,37 @@
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
       <!-- interpolation -->
-    <ul>
+    <!-- <ul>
         <li>{{title}}</li>
         <li>{{message}}</li>
         <li>{{sample()}}</li>
-        </ul>
+        </ul> -->
     
     <!-- Property binding -->
     
-    <h1 [style.color]="color" >Today is wednesday</h1>
+    <!-- <h1 [style.color]="color" >Today is wednesday</h1> -->
     
     
     <!-- event binding -->
     
-    <button class="btn btn-default" (click)="userClicked();">click</button>
+    <!-- <button class="btn btn-default" (click)="userClicked();">click</button>
     
-    <br/>
+    <br/> -->
     
     <!-- two-way binding using ngModel -->
-    <div class="form-group col-md-4">
+    <!-- <div class="form-group col-md-4">
         <label>Enter your name</label>
         <input class="form-control" type="text" [(ngModel)]="userInput" /> 
         <p>{{userInput}}</p>
-    </div>
+    </div> -->
+
+    <ul>
+      <li *ngFor="let item of displayAminities">
+        {{item}}
+      </li>
+    </ul>
+
+
     </div>
   </div>
 

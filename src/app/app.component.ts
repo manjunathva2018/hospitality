@@ -12,6 +12,10 @@ AfterContentInit,AfterContentChecked,DoCheck,AfterViewInit,AfterViewChecked{
 
   userData:any=[];
 
+  amenities:any=[];
+
+  amenity:string='';
+
   age:number;
 
   ngOnInit(){
@@ -23,31 +27,44 @@ AfterContentInit,AfterContentChecked,DoCheck,AfterViewInit,AfterViewChecked{
 
 
   ngOnChanges(){
-    console.log("ngOnChanges invoked");
+    // console.log("ngOnChanges invoked");
   }
 
   ngDoCheck (){
-    console.log("ngDoCheck invoked");
+    // console.log("ngDoCheck invoked");
   }
 
   ngAfterContentInit (){
-    console.log("ngAfterContentInit invoked");
+    // console.log("ngAfterContentInit invoked");
   }
 
   ngAfterContentChecked (){
-    console.log("ngAfterContentChecked invoked");
+    // console.log("ngAfterContentChecked invoked");
   }
 
   ngAfterViewInit (){
-    console.log("ngAfterViewInit invoked");
+    // console.log("ngAfterViewInit invoked");
   }
 
   ngAfterViewChecked (){
-    console.log("ngAfterViewChecked invoked");
+    // console.log("ngAfterViewChecked invoked");
   }
 
   ngOnDestroy(){
     console.log("ngOnDestroy invoked");
+  }
+
+
+
+  onSave(){
+    this.amenities.push(this.amenity);
+    console.log(this.amenities);
+    this.amenity='';
+  }
+
+  deleteElement(index){
+      console.log(index);
+      this.amenities.splice(index,1);
   }
 
 }
