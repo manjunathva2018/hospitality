@@ -8,9 +8,21 @@
     <div class="card-body">
 
         <div class="row">
+
+          <div class="col-md-6">
+            <app-login></app-login>
+          </div>
+
+          <div class="col-md-6">
+            <app-login1></app-login1>
+          </div>
+
+          <div class="col-md-6">
+            <app-register></app-register>
+          </div>
+
                <!-- this are a child components -->
             <div class="col-md-6">
-
 
               <div class="form-group">
                 <label>Enter an amenity for room A10:</label>
@@ -18,12 +30,13 @@
                 <button class="btn btn-info" [disabled]="amenities.length>2" (click)="onSave();">save</button>
               </div>
 
-            
                 <app-child-a [displayAminities]="amenities"></app-child-a>
             </div>
+
             <div class="col-md-6">
                 <app-child-b [displayAminities]="amenities" (deleteAminity)="deleteElement($event);"></app-child-b>
             </div>
+
         </div>
          
       <!-- *ngFor  structural directive-->

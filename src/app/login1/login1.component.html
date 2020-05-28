@@ -1,0 +1,20 @@
+<div class="card border-dark">
+    <div class="card-header">Login 1</div>
+    <div class="card-body">
+      <form  #loginForm="ngForm">
+        <div class="form-group">
+          <label>Email :</label>
+          <input name="email" [(ngModel)]="loginObj.email" class="form-control" type="text" />
+        </div>
+        <div class="form-group">
+          <label>Password :</label>
+          <input name="password" [(ngModel)]="loginObj.password" class="form-control" type="text" ngModel/>
+        </div>
+        <!-- <input type="submit" class="btn btn-success" value="Login" /> -->
+        <button class="btn btn-success" (click)="onSubmit()">Login</button>
+      </form>
+    </div>
+  </div>
+
+
+  
