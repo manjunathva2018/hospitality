@@ -1,0 +1,12 @@
+  uniqueNameAsync(control: FormControl): Promise<{[key: string]: any}> {
+    return new Promise(resolve => {
+        setTimeout(() => {
+        if (control.value === "David") {
+          resolve({"uniqueNameAsync": true});
+        } else {
+          resolve(null);
+        };
+        }
+        , 1000);
+    });
+  }

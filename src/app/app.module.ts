@@ -14,6 +14,8 @@ import { HighlightDirective } from './highlight.directive';
 import { LoginComponent } from './login/login.component';
 import { Login1Component } from './login1/login1.component';
 import { RegisterComponent } from './register/register.component';
+import { Register1Component } from './register1/register1.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegisterComponent } from './register/register.component';
     HighlightDirective,
     LoginComponent,
     Login1Component,
-    RegisterComponent
+    RegisterComponent,
+    Register1Component,
+    UserComponent
   ],
   imports: [
     BrowserModule,
