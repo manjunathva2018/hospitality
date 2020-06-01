@@ -1,31 +1,47 @@
-<form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+<div class="card border-warning">
+    <div class="card-header">User Profile (using formArray instance)</div>
+    <div class="card-body">
+        <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
  
-    <p>
-      <label for="name">Name </label>
-      <input type="text" id="name" name="name" formControlName="name">
-    </p>
-   
-  
-    Skills:
-    <div formArrayName="skills">
-      <div *ngFor="let skill of skills().controls; let i=index">
-        <div [formGroupName]="i">
-          {{i}}
-          skill name :
-          <input type="text" formControlName="skill">
-          exp:
-          <input type="text" formControlName="exp">
-   
-          <button (click)="removeSkill(i)">Remove</button>
-        </div>
-      </div>
-   <p>
-    <button type="button" (click)="addSkills()">Add</button>
-  </p>
+            <div class="form-group">
+              <label for="name">Name : </label>
+              <input type="text" class="form-control" id="name" name="name" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender : </label>
+                <input class="form-control" type="text" id="gender" name="gender" formControlName="gender">
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of birth : </label>
+                <input class="form-control" type="datetime" id="dob" name="dob" formControlName="dob">
+              </div>
+              
+           <h3>Skills</h3>
+          
+            <div formArrayName="skills">
+              <div *ngFor="let skill of skills.controls; let i=index" class="card border-success">
+                <div [formGroupName]="i" class="card-body">
+                    <div class="form-group">
+                        <label> {{i}} Skill name :</label>
+                        <input class="form-control" type="text" formControlName="skill">
+                    </div>
+                  <div class="form-group">
+                    <label>Experience :</label>
+                    <input class="form-control" type="text" formControlName="exp">
+                  </div>
+                  <button (click)="removeSkill(i)" class="btn btn-danger mb-2">Remove</button>
+                </div>
+              </div>
+           <p>
+            <button class="btn btn-info" (click)="addSkills()">Add</button>
+          </p>
+            </div>
+           
+            <div>
+              <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+           
+          </form>
     </div>
-   
-    <p>
-      <button type="submit">Submit</button>
-    </p>
-   
-  </form>
+</div>
+

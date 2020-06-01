@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
  
     this.skillsForm = this.fb.group({
       name: '',
+      gender:'',
+      dob:'',
       skills: this.fb.array([]) ,
     });
   
