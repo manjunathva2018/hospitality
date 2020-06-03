@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Login1Component implements OnInit {
 
+regx:string="^[a-zA-Z0-9]$";
+
 loginObj:any={
   email:'',
   password:''
