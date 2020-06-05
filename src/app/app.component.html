@@ -24,7 +24,7 @@
           <div class="col-md-6">
             <app-register1></app-register1>
           </div>
-          
+
           <div class="col-md-6">
             <app-user></app-user>
           </div>
@@ -46,7 +46,7 @@
             </div>
 
         </div>
-         
+
       <!-- *ngFor  structural directive-->
       <div class="row">
         <div class="col-md-4" *ngFor="let item of userData" appHighlight>
@@ -61,12 +61,15 @@
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item" *ngFor="let item of userData" appHighlight>
-                name - {{ item.name }}, age - {{item.age}}, mobile No - {{item.mobileNo}}
+                name - {{ item.name }}, age - {{item.age}}, mobile No - {{item.mobileNo}} dob - {{item.dob | date:"dd-MM-yyyy"}}
               </li>
             </ul>
           </div>
         </div>
       </div>
+
+
+{{userData | json}}
 
       <!-- ngSwitch -->
 
@@ -80,7 +83,7 @@
         </div>
       </ng-template>
 
-  
+
 
     </div>
   </div>
